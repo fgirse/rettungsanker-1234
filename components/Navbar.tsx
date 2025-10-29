@@ -22,7 +22,7 @@ const menuItems = [
     ],
   },
   {
-    label: "drinks & snacks",
+    label: "drinks",
     href: "/drinks",
     submenu: [
       { label: "Biere", href: "/drinks/biere" },
@@ -46,7 +46,7 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 lg:bg-[url('/Wood3.svg')] lg:bg-cover lg:bg-no-repeat lg:bg-center">
+    <nav className="sticky top-0 z-50 w-full border-b border-border backdrop-blur supports-[backdrop-filter]:bg-background/10 lg:bg-[url('/Wood3.svg')] lg:bg-cover lg:bg-no-repeat lg:bg-center">
       <div className="container mx-auto flex h-[13vh] items-center justify-between px-4">
         <div className="relative ml-12">
           <Link href="/" className="relative lg:left-[5vw] ">
@@ -102,7 +102,7 @@ export default function Navbar() {
               <span className="sr-only">Toggle menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-[80vw] p-0 bg-stone-300">
+          <SheetContent side="right" className="w-[80vw] p-5 bg-orange-200">
             <div className="flex h-full flex-col">
               {/* Mobile Menu Header */}
               <div className="flex items-center justify-between border-b border-border p-4">
@@ -121,7 +121,7 @@ export default function Navbar() {
                         <div>
                           <button
                             onClick={() => toggleSubmenu(item.label)}
-                            className="flex w-full items-center justify-between rounded-md px-7 py-2 text-[2.66em] headingA font-medium uppercase transition-colors hover:bg-yellow-600 hover:text-white"
+                            className="relative left-4 flex w-full items-center justify-between rounded-md px-7 py-2 text-[2.00rem] headingA font-medium uppercase transition-colors hover:bg-yellow-600 hover:text-white"
                           >
                             {item.label}
                             <ChevronDown
@@ -135,7 +135,7 @@ export default function Navbar() {
                                   key={subItem.label}
                                   href={subItem.href}
                                   onClick={() => setIsOpen(false)}
-                                  className="rounded-md px-3 py-2 text-sm transition-colors hover:bg-accent hover:text-accent-foreground"
+                                  className="rounded-md relative left-3 px-3 py-2 text-[1.66rem] transition-colors hover:bg-amber-500 hover:text-accent-foreground"
                                 >
                                   {subItem.label}
                                 </Link>
@@ -147,7 +147,7 @@ export default function Navbar() {
                         <Link
                           href={item.href}
                           onClick={() => setIsOpen(false)}
-                          className="block rounded-md px-3 py-2 text-[2.66em] headingA uppercase font-medium transition-colors hover:bg-yellow-600 hover:text-white"
+                          className="block relative left-3 rounded-md px-3 py-2 text-[2.00rem] headingA uppercase font-medium transition-colors hover:bg-yellow-600 hover:text-white"
                         >
                           {item.label}
                         </Link>

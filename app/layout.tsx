@@ -3,6 +3,7 @@ import { Architects_Daughter, Bowlby_One_SC } from "next/font/google";
 import "./globals.css";
 import InfoBar from "../components/InfoBar";
 import Navigation from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const archiDaughter = Architects_Daughter({
   variable: "--font-archiDaughter",
@@ -34,7 +35,9 @@ export default function RootLayout({
         <Navigation />
         <InfoBar />
         {children}
+        <Footer />
       </body>
+      
     </html>
   );
 }
