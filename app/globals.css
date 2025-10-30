@@ -204,9 +204,9 @@ body {
 
 }
 
-@tailwind base;
-@tailwind components;
+@import "tailwindcss/preflight";
 @tailwind utilities;
+
 
 /* New design system with yellow-500, red-700, and amber-500 color palette */
 :root {

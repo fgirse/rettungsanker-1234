@@ -96,8 +96,8 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
-          <SheetTrigger asChild className="md:hidden">
-            <Button variant="ghost" size="icon">
+          <SheetTrigger asChild className="lg:hidden">
+            <Button variant="secondary" size="icon">
               <Menu className="h-6 w-6" />
               <span className="sr-only">Toggle menu</span>
             </Button>
@@ -106,9 +106,9 @@ export default function Navbar() {
             <div className="flex h-full flex-col">
               {/* Mobile Menu Header */}
               <div className="flex items-center justify-between border-b border-border p-4">
-                <span className="text-xl font-bold">Menu</span>
-                <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
-                  <X className="h-6 w-6" />
+                <span className="text-3l font-bold">Menu</span>
+                <Button variant="secondary" size="xl" onClick={() => setIsOpen(false)}>
+                  <X className="h-8 w-8" />
                 </Button>
               </div>
 
@@ -121,7 +121,7 @@ export default function Navbar() {
                         <div>
                           <button
                             onClick={() => toggleSubmenu(item.label)}
-                            className="relative left-4 flex w-full items-center justify-between rounded-md px-7 py-2 text-[2.00rem] headingA font-medium uppercase transition-colors hover:bg-yellow-600 hover:text-white"
+                            className="relative left-1 flex w-full items-center justify-between rounded-md px-7 py-2 text-[2.00rem] headingA font-medium uppercase transition-colors hover:bg-yellow-600 hover:text-white"
                           >
                             {item.label}
                             <ChevronDown
@@ -135,7 +135,7 @@ export default function Navbar() {
                                   key={subItem.label}
                                   href={subItem.href}
                                   onClick={() => setIsOpen(false)}
-                                  className="rounded-md relative left-3 px-3 py-2 text-[1.66rem] transition-colors hover:bg-amber-500 hover:text-accent-foreground"
+                                  className="rounded-md relative left-1 px-3 py-2 text-[2.00rem] uppercase transition-colors hover:bg-amber-500 hover:text-accent-foreground"
                                 >
                                   {subItem.label}
                                 </Link>
@@ -147,7 +147,7 @@ export default function Navbar() {
                         <Link
                           href={item.href}
                           onClick={() => setIsOpen(false)}
-                          className="block relative left-3 rounded-md px-3 py-2 text-[2.00rem] headingA uppercase font-medium transition-colors hover:bg-yellow-600 hover:text-white"
+                          className="block relative left-1 rounded-md px-3 py-2 text-[2.00rem] headingA uppercase font-medium transition-colors hover:bg-yellow-600 hover:text-white"
                         >
                           {item.label}
                         </Link>

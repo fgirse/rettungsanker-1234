@@ -54,13 +54,13 @@ export default function AnimatedLogo() {
       <div className="flex flex-col justify-center items-start">
         <h1
           ref={textRef}
-          className="relative top-[25vh] text-amber-50 headingE text-shadow-lg text-[40vw] md:text-[20vw] lg:text-[30vw] lg:-top-10 text-center tracking-wide"
+          className="relative top-[25vh] text-amber-50 headingE text-shadow-lg text-[40vw] md:text-[25vw] lg:text-[30vw] lg:-top-10 text-center tracking-wide"
         >
           die
         </h1>
         <h1
           ref={textRef}
-          className="relative top-[15vh] headingA text-shadow-lg text-[13vw] md:text-7xl lg:-top-[28vh] lg:text-[10vw] text-red-700 text-center"
+          className="relative top-[15vh] headingA text-shadow-lg text-[13vw] md:top-[20vh] md:text-7xl lg:-top-[28vh] lg:text-[10vw] text-red-700 text-center"
         >
           kiezkeipe
         </h1>
